@@ -3,12 +3,13 @@ function Application(props){
 	// Components return a single virtual DOM element
 	return(
 		<div className="application">
+			<h1>{props.title}</h1>
 			{props.message}
 		</div>
 	)
 }
 
 ReactDOM.render(
-	<Application message="Hello, Class" />,
+	<Application message="Hello, Class" title="React Day!" />,
 	document.getElementById('container')
 )
