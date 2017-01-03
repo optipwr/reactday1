@@ -8,10 +8,16 @@ var Application = React.createClass({
 	render: function(){
 		return(
 			<div className="application">
-				<button>Click to Flip</button>
+				<button onClick={this.flipCoin}>Click to Flip</button>
 				<div><img src={this.state.image} /></div>
 			</div>
 		)
+	},
+
+	flipCoin: function(){
+		this.setState({
+			image: 'http://www.marshu.com/articles/images-website/articles/presidents-on-coins/half-dollar-coin-head.jpg'
+		})
 	}
 });
 
